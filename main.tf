@@ -5,7 +5,7 @@ data "aws_route53_zone" "main" {
 resource "aws_cloudwatch_log_group" "main" {
   provider = aws.us-east-1
 
-  name              = "/aws/route53/${data.aws_route53_zone.main.name}."
+  name              = "/aws/route53/${data.aws_route53_zone.main.name}"
   retention_in_days = var.logs_cloudwatch_retention
 }
 
